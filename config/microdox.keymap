@@ -22,7 +22,21 @@
    &kp Q      &kp W      &kp F       &kp P       &kp B      &kp J    &kp L       &kp U       &kp Y      &kp SEMI
    &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G      &kp M    &mt RSHFT N &mt RCTRL E &mt RALT I &mt RGUI O
    &kp Z      &kp X      &kp C       &kp D       &kp V      &kp K    &kp H       &kp COMMA   &kp DOT    &kp FSLH
-                         &trans      &lt 1 TAB   &kp SPACE  &kp BSPC &lt 2 ENTER &tog 3
+                         &trans      &lt 2 TAB   &kp SPACE  &kp BSPC &lt 1 ENTER &tog 3
+                        >;
+                };
+
+                 nav_layer {
+// -----------------------------------------------------------------------------------------
+// | F1 | F2 | F3 | F4  | F5  |  |     |      |  UP  |      | BTCLR |
+// | F6 | F7 | F8 | F9  | F10 |  |     | LEFT | DOWN | RGHT |       |
+// |    |    |    | F11 | F12 |  | BT0 | BT1  | BT2  | BT3  |  BT4  |
+//           |    | ESC | DEL |  |     |      |      |
+                        bindings = <
+   &kp F1 &kp F2 &kp F3 &kp F4  &kp F5   &trans       &trans       &kp UP       &trans       &bt BT_CLR
+   &kp F6 &kp F7 &kp F8 &kp F9  &kp F10  &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans
+   &trans &trans &trans &kp F11 &kp F12  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+                 &trans &kp ESC &kp DEL  &trans       &trans       &trans
                         >;
                 };
 
@@ -40,21 +54,7 @@
                         >;
                 };
 
-                nav_layer {
-// -----------------------------------------------------------------------------------------
-// | F1 | F2 | F3 | F4  | F5  |  |     |      |  UP  |      | BTCLR |
-// | F6 | F7 | F8 | F9  | F10 |  |     | LEFT | DOWN | RGHT |       |
-// |    |    |    | F11 | F12 |  | BT0 | BT1  | BT2  | BT3  |  BT4  |
-//           |    | ESC | DEL |  |     |      |      |
-                        bindings = <
-   &kp F1 &kp F2 &kp F3 &kp F4  &kp F5   &trans       &trans       &kp UP       &trans       &bt BT_CLR
-   &kp F6 &kp F7 &kp F8 &kp F9  &kp F10  &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans
-   &trans &trans &trans &kp F11 &kp F12  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                 &trans &kp ESC &kp DEL  &trans       &trans       &trans
-                        >;
-                };
-
-                game_layer {
+                num_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  E  |  R  |  |  T   | Y  |  U   |  I  |  O  |
 // | CTRL |  A  |  S  |  D  |  F  |  |  G   | H  |  J   |  K  |  L  |
