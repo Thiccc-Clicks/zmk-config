@@ -14,58 +14,57 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
+// |  Q  |  W  |  F  |  P  |  B  |   |  J   |  L   |  U  |  Y  |  ;  |
+// |  A  |  R  |  S  |  T  |  G  |   |  M   |  N   |  E  |  I  |  O  |
+// |  Z  |  X  |  C  |  D  |  V  |   |  K   |  H   |  ,  |  .  |  /  |
+//             |     | TAB | SPC |   | BKSP | ENTR | L3  |
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RALT
-                        >;
-                };
-                nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
-                        bindings = <
-   &bt BT_CLR   &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
-   &bt BT_SEL 0 &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
-                            &trans   &trans    &trans     &trans   &trans   &trans
+   &kp Q      &kp W      &kp F       &kp P       &kp B      &kp J    &kp L       &kp U       &kp Y      &kp SEMI
+   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G      &kp M    &mt RSHFT N &mt RCTRL E &mt RALT I &mt RGUI O
+   &kp Z      &kp X      &kp C       &kp D       &kp V      &kp K    &kp H       &kp COMMA   &kp DOT    &kp FSLH
+                         &trans      &lt 1 TAB   &kp SPACE  &kp BSPC &lt 2 ENTER &tog 3
                         >;
                 };
 
                 sym_layer {
 // -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+// | 1 | 2 | 3 | 4 | 5 |   |  6  | 7 | 8 | 9 | 0 |
+// | $ | + | ( | ) | @ |   | "|" | - | = | _ | * |
+// | ! | # | { | } | ~ |   |  &  | [ | ] | % | ^ |
+//         |   |   |   |   |  \  | ` |   |
                         bindings = <
-   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
-   &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
-                       &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0
+   &kp DLLR &kp PLUS &kp LPAR &kp RPAR &kp AT     &kp PIPE &kp MINUS &kp EQUAL &kp UNDER &kp STAR
+   &kp EXCL &kp HASH &kp LBRC &kp RBRC &kp TILDE  &kp AMPS &kp LBKT  &kp RBKT  &kp PRCNT &kp CARET
+                     &trans   &trans   &trans     &kp BSLH &kp GRAVE &trans
                         >;
                 };
 
-// This layer is unreachable until "tri layer state" is sorted out.
-// Leaving it here for completeness.
-                num_layer {
+                nav_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
-//             |     |     |     |   |  0  |  .  |     |
+// | F1 | F2 | F3 | F4  | F5  |  |     |      |  UP  |      | BTCLR |
+// | F6 | F7 | F8 | F9  | F10 |  |     | LEFT | DOWN | RGHT |       |
+// |    |    |    | F11 | F12 |  | BT0 | BT1  | BT2  | BT3  |  BT4  |
+//           |    | ESC | DEL |  |     |      |      |
                         bindings = <
-   &trans &trans &trans &trans &trans    &kp A  &kp N7  &kp N8 &kp N9 &kp D
-   &trans &trans &trans &trans &trans    &kp B  &kp N4  &kp N5 &kp N6 &kp E
-   &trans &trans &trans &trans &trans    &kp C  &kp N1  &kp N2 &kp N3 &kp F
-                 &trans &trans &trans    &kp N0 &kp DOT &trans
+   &kp F1 &kp F2 &kp F3 &kp F4  &kp F5   &trans       &trans       &kp UP       &trans       &bt BT_CLR
+   &kp F6 &kp F7 &kp F8 &kp F9  &kp F10  &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans
+   &trans &trans &trans &kp F11 &kp F12  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+                 &trans &kp ESC &kp DEL  &trans       &trans       &trans
+                        >;
+                };
+
+                game_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB  |  Q  |  W  |  E  |  R  |  |  T   | Y  |  U   |  I  |  O  |
+// | CTRL |  A  |  S  |  D  |  F  |  |  G   | H  |  J   |  K  |  L  |
+// | SHFT |  Z  |  X  |  C  |  V  |  |  B   | N  |  M   |  P  |  ;  |
+//              | ESC | ALT | SPC |  | BKSP | F4 |  L3  |
+                        bindings = <
+   &kp TAB   &kp Q &kp W   &kp E    &kp R      &kp T    &kp Y  &kp U  &kp I &kp O
+   &kp LCTRL &kp A &kp S   &kp D    &kp F      &kp G    &kp H  &kp J  &kp K &kp L
+   &kp LSHFT &kp Z &kp X   &kp C    &kp V      &kp B    &kp N  &kp M  &kp P &kp ;
+                   &kp ESC &kp LALT &kp SPACE  &kp BSPC &kp F4 &tog 3
                         >;
                 };
         };
