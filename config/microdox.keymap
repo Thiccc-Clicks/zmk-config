@@ -28,12 +28,12 @@
 
                  nav_layer {
 // -----------------------------------------------------------------------------------------
-// | F1 | F2 | F3 | F4  | F5  |  |     |      |  UP  |      | BTCLR |
+// | F1 | F2 | F3 | F4  | F5  |  |  `  |      |  UP  |      | BTCLR |
 // | F6 | F7 | F8 | F9  | F10 |  |     | LEFT | DOWN | RGHT |       |
 // |    |    |    | F11 | F12 |  | BT0 | BT1  | BT2  | BT3  |  BT4  |
 //           |    | ESC | DEL |  |     |      |      |
                         bindings = <
-   &kp F1 &kp F2 &kp F3 &kp F4  &kp F5   &trans       &trans       &kp UP       &trans       &bt BT_CLR
+   &kp F1 &kp F2 &kp F3 &kp F4  &kp F5   &kp GRAVE    &trans       &kp UP       &trans       &bt BT_CLR
    &kp F6 &kp F7 &kp F8 &kp F9  &kp F10  &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans
    &trans &trans &trans &kp F11 &kp F12  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
                  &trans &kp ESC &kp DEL  &trans       &trans       &trans
@@ -45,12 +45,12 @@
 // | 1 | 2 | 3 | 4 | 5 |   |  6  | 7 | 8 | 9 | 0 |
 // | $ | + | ( | ) | @ |   | "|" | - | = | _ | * |
 // | ! | # | { | } | ~ |   |  &  | [ | ] | % | ^ |
-//         |   |   |   |   |  \  | ` |   |
+//         |   |   |   |   |  '  | " | \ |
                         bindings = <
    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0
    &kp DLLR &kp PLUS &kp LPAR &kp RPAR &kp AT     &kp PIPE &kp MINUS &kp EQUAL &kp UNDER &kp STAR
    &kp EXCL &kp HASH &kp LBRC &kp RBRC &kp TILDE  &kp AMPS &kp LBKT  &kp RBKT  &kp PRCNT &kp CARET
-                     &trans   &trans   &trans     &kp BSLH &kp GRAVE &trans
+                     &trans   &trans   &trans     &kp APOS &kp DQT   &kp BSLH
                         >;
                 };
 
